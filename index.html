@@ -10,11 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 
   <style>
+    :root {
+      --bg-color: #121212;
+      --sidebar-bg: #1f1f2e;
+      --text-color: #e0e0e0;
+      --subtext-color: #a0a0a0;
+      --accent: #4f8cff;
+      --card-bg: #1e1e2f;
+      --hover-card: #292943;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
 
     .container {
@@ -24,8 +34,8 @@
 
     .sidebar {
       width: 280px;
-      background-color: #1e1e2f;
-      color: #fff;
+      background-color: var(--sidebar-bg);
+      color: var(--text-color);
       padding: 2rem;
       display: flex;
       flex-direction: column;
@@ -52,7 +62,7 @@
     .title {
       font-size: 1rem;
       font-weight: 400;
-      color: #bbb;
+      color: var(--subtext-color);
     }
 
     .contact-info {
@@ -67,7 +77,7 @@
     .contact-label {
       font-size: 0.85rem;
       font-weight: 600;
-      color: #888;
+      color: var(--subtext-color);
       margin: 0;
     }
 
@@ -99,12 +109,12 @@
 
     .nav-link {
       text-decoration: none;
-      color: #333;
+      color: var(--text-color);
       font-weight: 500;
     }
 
     .nav-link.active {
-      color: #007BFF;
+      color: var(--accent);
     }
 
     .section {
@@ -125,6 +135,7 @@
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 1rem;
+      color: var(--subtext-color);
     }
 
     .cards-grid {
@@ -134,15 +145,16 @@
     }
 
     .card {
-      background-color: #fff;
+      background-color: var(--card-bg);
       border-radius: 12px;
       padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s, background-color 0.3s;
     }
 
     .card:hover {
       transform: translateY(-4px);
+      background-color: var(--hover-card);
     }
 
     .card-content {
@@ -158,18 +170,19 @@
     .icon {
       width: 32px;
       height: 32px;
-      stroke: #007BFF;
+      stroke: var(--accent);
     }
 
     .card-title {
       font-size: 1.1rem;
       font-weight: 600;
       margin: 0;
+      color: var(--text-color);
     }
 
     .card-description {
       font-size: 0.95rem;
-      color: #555;
+      color: var(--subtext-color);
       margin: 0.25rem 0 0;
     }
   </style>
